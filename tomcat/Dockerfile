@@ -11,8 +11,8 @@ RUN sed -i -e '/^tomcat.util.scan.StandardJarScanFilter.jarsToSkip/,/^xom/ d' -e
 RUN sed -i -e '/org.apache.catalina.webresources/ c JAVA_OPTS="$JAVA_OPTS -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Djava.security.egd=file:/dev/./urandom"' /opt/tomcat/bin/catalina.sh 
 
 ### Download student.war and mysql jar file for connectivity
-ADD https://github.com/versionit/bonafide/blob/master/tomcat/studentapp/student.war?raw=true /opt/tomcat/webapps/student.war
-ADD https://github.com/versionit/bonafide/blob/master/tomcat/studentapp/mysql-connector-java-5.1.40.jar?raw=true /opt/tomcat/lib/mysql-connector-java-5.1.40.jar
+ADD https://github.com/sivakethineni/customwebapp/student.war?raw=true /opt/tomcat/webapps/student.war
+ADD https://github.com/sivakethineni/customwebapp/mysql-connector-java-5.1.40.jar?raw=true /opt/tomcat/lib/mysql-connector-java-5.1.40.jar
 
 ## Adding DB info
 ADD context.xml /opt/tomcat/conf
