@@ -12,7 +12,7 @@ RUN sed -i -e '/org.apache.catalina.webresources/ c JAVA_OPTS="$JAVA_OPTS -Djava
 
 ### Download student.war and mysql jar file for connectivity
 ADD https://github.com/sivakethineni/studentapp/blob/master/student.war?raw=true /opt/tomcat/webapps/student.war
-ADD https://github.com/sivakethineni/studentapp/mysql-connector-java-5.1.40.jar?raw=true /opt/tomcat/lib/mysql-connector-java-5.1.40.jar
+ADD https://github.com/sivakethineni/studentapp/blob/master/mysql-connector-java-5.1.40.jar?raw=true /opt/tomcat/lib/mysql-connector-java-5.1.40.jar
 
 ## Adding DB info
 ADD context.xml /opt/tomcat/conf
